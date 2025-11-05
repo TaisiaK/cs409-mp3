@@ -91,6 +91,8 @@ def main(argv):
         response = conn.getresponse()
         data = response.read()
         d = json.loads(data)
+        print("user data:", data)
+        print("user d:", d)
 
         # Store the users id
         userIDs.append(str(d['data']['_id']))
@@ -120,6 +122,9 @@ def main(argv):
         response = conn.getresponse()
         data = response.read()
         d = json.loads(data)
+
+        print("task data:", data)
+        print("task d:", d)
 
         taskID = str(d['data']['_id'])
 
