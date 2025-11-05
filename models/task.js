@@ -1,6 +1,12 @@
 // Load required packages
 var mongoose = require('mongoose');
 
+//define user schema 
+var UserSchema = new mongoose.Schema({
+    name: {type: String, required : [true, "name is required"]},
+    deadline: {type: String, required : [true, "deadline is required"]}
+});
+
 // Define our task schema
 var UserSchema = new mongoose.Schema({
     name: String, 
